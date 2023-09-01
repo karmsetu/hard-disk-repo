@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('./SourceCodePro-Black.ttf') format('TrueType');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* Format	MIME type
+    TrueType	            font/ttf
+    OpenType	            font/otf
+    Web Open Font Format	font/woff
+    Web Open Font Format 2	font/woff2 */
+  
+  .hello {
+    color: blue;
+    margin: 30px;
+    font-family: 'myFont';
+    background: url('./React-icon.svg.png');
+}
