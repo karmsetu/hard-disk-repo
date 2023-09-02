@@ -1,0 +1,7 @@
+.add-task, .add-project {
+    padding: 20px;
+    background-color: azure;
+    color: rgb(47, 4, 78);
+    margin: 16px;
+    font-size: large;
+}
