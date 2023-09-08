@@ -9,3 +9,23 @@ Currently, two official plugins are available:
 
 
 > ```npm create vite@latest my-first-react-app -- --template react```
+>``` npm install ```
+>``` npm run dev ```
+
+
+## Greeting function
+
+```
+function Greeting() { 
+    return <h1>&quot;I swear by my pretty floral bonnet, I will end you.&quot;</h1>;
+}
+
+export default Greeting
+``` 
+[^1] created seperate function and added it to the *App.jsx* file.
+### `< Greeting/>` was used as input in app
+
+---
+If you meant to render a React component, start its name with an uppercase letter.
+
+
