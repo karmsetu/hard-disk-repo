@@ -8,6 +8,7 @@ import NewList from './newList'
 import TodoList from './toDo'
 import Button from './buttonProp'
 import ColorButton from './colorButton'
+import Person from './person'
 // import ListReturner from './assets/listReturner'
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
         <Button  />
       </div>
       < ColorButton/>
+      < Person/>
       {/* < ListReturner/> */}
     </>
   )

@@ -80,3 +80,7 @@ return (
 # State in react
 > State is a component’s memory.
 
+
+## state rules
+1. State should not be mutated
+:  In order for us to change state, we should always use the setState function. 
