@@ -46,3 +46,37 @@ export default function ListReturner(props) {
 ```
 
 # always remember to refresh!
+: Assuming we want to hunt down that one specific item that was changed and NOT re-render the entire list. We need something to track that specific item. We can track down a specific item by using a key.
+
+When the list is updated for whatever reason, (either from a server or a user interaction), React matches the keys of each of the previous list to the updated list. If there were any changes, React will only update the items that have changed.
+
+As long as keys remain consistent and unique, React can handle the DOM effectively and efficiently.
+
+## Using uuid package to generate unique keys
+
+`npm install uuid`
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+```
+
+more info at [uuid - npm](https://www.npmjs.com/package/uuid)
+
+---
+# Using function as prop
+```js
+export default function HandleClick() {
+    window.location.href = "http://www.google.com";
+}
+```: functionAsProp.jsx
+```js
+return (
+      <button onClick={HandleClick} style={buttonStyle}>{text}</button>
+    )
+``` 
+: buttonProp.jsx
+---
+# State in react
+> State is a component’s memory.
+

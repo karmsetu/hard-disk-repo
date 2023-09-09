@@ -4,6 +4,10 @@
 import Greeting from './greetings'
 import Animal from './animalList'
 import MyFruitList from './fruitList'
+import NewList from './newList'
+import TodoList from './toDo'
+import Button from './buttonProp'
+import ColorButton from './colorButton'
 // import ListReturner from './assets/listReturner'
 import './App.css'
 
@@ -15,6 +19,14 @@ function App() {
       < Greeting/>
       < Animal/>
       <MyFruitList/>
+      < NewList/>
+      < TodoList/>
+      <div>
+        <Button text="Click Me!" color="blue" fontSize={12} />
+        <Button text="Don't Click Me!" color="red" fontSize={12} />
+        <Button  />
+      </div>
+      < ColorButton/>
       {/* < ListReturner/> */}
     </>
   )
