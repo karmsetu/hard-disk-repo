@@ -3,6 +3,8 @@
 // import viteLogo from '/vite.svg'
 import Greeting from './greetings'
 import Animal from './animalList'
+import MyFruitList from './fruitList'
+// import ListReturner from './assets/listReturner'
 import './App.css'
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
     <>
       < Greeting/>
       < Animal/>
+      <MyFruitList/>
+      {/* < ListReturner/> */}
     </>
   )
 }
