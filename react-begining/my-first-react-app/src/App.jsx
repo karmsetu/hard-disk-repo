@@ -9,6 +9,7 @@ import TodoList from './toDo'
 import Button from './buttonProp'
 import ColorButton from './colorButton'
 import Person from './person'
+import Clock from './useStateHook'
 // import ListReturner from './assets/listReturner'
 import './App.css'
 
@@ -29,6 +30,7 @@ function App() {
       </div>
       < ColorButton/>
       < Person/>
+      < Clock/>
       {/* < ListReturner/> */}
     </>
   )
