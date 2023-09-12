@@ -10,6 +10,7 @@ import Button from './buttonProp'
 import ColorButton from './colorButton'
 import Person from './person'
 import Clock from './useStateHook'
+import FunctionalInput from './classComponent'
 // import ListReturner from './assets/listReturner'
 import './App.css'
 
@@ -31,6 +32,7 @@ function App() {
       < ColorButton/>
       < Person/>
       < Clock/>
+      < FunctionalInput/>
       {/* < ListReturner/> */}
     </>
   )
