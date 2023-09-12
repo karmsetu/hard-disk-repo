@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+}
+section {
+    height: 20vh;
+    width: 100vw;
+    background-color: chartreuse;
+}
