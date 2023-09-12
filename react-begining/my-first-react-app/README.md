@@ -102,3 +102,7 @@ In this method you should be updating anything that needs to be changed in respo
 
 ## componentWillUnmount()
 > This is the last lifecycle method, which is called before a component is unmounted and destroyed. In this method you should be performing cleanup actions, so that would be cancelling network requests, clearing timers, etc.
+
+# Type Checking
+> Type Checking is a process of verifying that a piece of code is using the correct data types for variables, function parameters and return values.
+> `npm install --save prop-types`
