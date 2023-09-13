@@ -106,3 +106,11 @@ In this method you should be updating anything that needs to be changed in respo
 # Type Checking
 > Type Checking is a process of verifying that a piece of code is using the correct data types for variables, function parameters and return values.
 > `npm install --save prop-types`
+
+# The useRef hook
+> The useRef hook lets you manage a value that’s not needed for rendering. They are an alternative to state, as when you want a component to “remember” some information, but you don’t want that information to trigger new renders, you can use this hook.
+
+They are often used when performing imperative actions or accessing specific elements rendered in the DOM. Refs can also persist values throughout the component’s lifecycle, meaning that the value of the ref will not be destroyed every time a component re-renders. This is very useful when you want to store a value that you want to persist throughout the component’s lifecycle without storing it in a state.
+
+# The useCallback hook
+> The useCallback hook provides another way to memoize a value, not just any value like useMemo. It can only memoize a function. Did you see the previous snippet that we have with memoizing a function reference with useMemo?

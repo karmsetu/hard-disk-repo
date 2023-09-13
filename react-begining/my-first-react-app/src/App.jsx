@@ -12,6 +12,8 @@ import Person from './person'
 import Clock from './useStateHook'
 import FunctionalInput from './classComponent'
 import RenderName from './typeChecker'
+import ButtonComponent from './useRefHook'
+import MemoHook from './memoHook'
 // import ListReturner from './assets/listReturner'
 import './App.css'
 
@@ -35,6 +37,8 @@ function App() {
       < Clock/>
       < FunctionalInput/>
       < RenderName name='boi'/>
+      < ButtonComponent/>
+      < MemoHook/>
       {/* < ListReturner/> */}
     </>
   )
