@@ -1,3 +1,5 @@
+# mini-project
+```js
 var http = require('http')
 var fs = require('fs');
 var url = require('url');
@@ -6,7 +8,13 @@ const hostname = '127.0.0.1'
 const port = 3000
 
 const server = http.createServer((req, res) => {
-    var URL = url.parse(req.url, true)
+    
+  })
+  ```
+  basic structure
+
+```js
+var URL = url.parse(req.url, true)
     console.log(URL)
     var fileName = `.${URL.pathname}`
     fs.readFile(fileName, (err, data)=> {
@@ -18,8 +26,6 @@ const server = http.createServer((req, res) => {
         res.write(data)
         return res.end()
     })
-  })
-  
-  server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
-  })
+```
+
+copied shamelessly from [link](https://www.youtube.com/watch?v=zJZMWoG-vnc)
