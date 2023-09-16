@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mongodb": "^6.1.0"
+  },
+  "name": "mongodb-course",
+  "description": "- Unit 01: Getting Started with MongoDB Atlas, the Developer Data Platform\r - Unit 02: Overview of MongoDB and the Document Model\r - Unit 03: Connecting to a MongoDB Database\r - Unit 04: MongoDB CRUD Operations: Insert and Find Documents\r - Unit 05: MongoDB CRUD: Replace and Delete\r - Unit 06: MongoDB CRUD Operations: Modifying Query Results\r - Unit 07: MongoDB Aggregation\r - Unit 08: MongoDB Indexing\r - Unit 09: MongoDB Atlas Search\r - Unit 10: Introduction to MongoDB Data Modeling\r - Unit 11: MongoDB Transactions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
