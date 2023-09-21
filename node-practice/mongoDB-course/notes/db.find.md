@@ -103,3 +103,8 @@ db.sales.find({
         {age: {$lte:25}}
     ]
 })
+
+sb.sales.find(
+  db.sales.find({ "items.name": { $in: ["laptop", "backpack", "printer paper"] }, "storeLocation": "London", }).sort({ saleDate: -1, }).limit(3)
+)
+db.sales.find({ "items.name": { $in: ["laptop", "backpack", "printer paper"] }, "storeLocation": "London", }).sort({ saleDate: -1, }).limit(3)
