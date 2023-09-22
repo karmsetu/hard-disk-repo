@@ -87,7 +87,7 @@ db.routes.find({
     { $or: [{ "airline.name": "American Airlines" }, { airplane: 320 }] },
   ]
 })
-```
+``` 
 
 db.sales.find({
     $and: [
