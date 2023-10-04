@@ -10,3 +10,8 @@ app.get('/', (req, res, next)=> {
     // res.send(`hi`)//generic
     res.render('index', {text: 'world'})
 })
+
+const userRouter = require('./routes/users')
+
+app.use('/users', userRouter)
+
