@@ -77,3 +77,6 @@ The following are all the valid SchemaTypes in Mongoose. Mongoose plugins can al
 - BigInt
 
 cd D:\hard-disk-repos\node-practice\mongoDB-course\yt
+
+# custom validation
+
