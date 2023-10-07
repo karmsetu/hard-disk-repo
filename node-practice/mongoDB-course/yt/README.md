@@ -58,3 +58,22 @@ npm i --save-dev nodemon
 3. search mongo
 4. activate services
 [ref](https://stackoverflow.com/questions/46523321/mongoerror-connect-econnrefused-127-0-0-127017)
+
+# basic guide
+The following are all the valid SchemaTypes in Mongoose. Mongoose plugins can also add custom SchemaTypes like int32. Check out Mongoose's plugins search to find plugins.
+
+- String
+- Number
+- Date
+- Buffer
+- Boolean
+- Mixed
+- ObjectId
+- Array
+- Decimal128
+- Map
+- Schema
+- UUID
+- BigInt
+
+cd D:\hard-disk-repos\node-practice\mongoDB-course\yt
