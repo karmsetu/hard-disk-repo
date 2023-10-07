@@ -51,3 +51,10 @@ db.users.deleteMany({<object>})
 npm i mongoose
 npm i --save-dev nodemon
 ```
+
+# error handling 
+1. press win key & R key
+2. search `services.msc`
+3. search mongo
+4. activate services
+[ref](https://stackoverflow.com/questions/46523321/mongoerror-connect-econnrefused-127-0-0-127017)
