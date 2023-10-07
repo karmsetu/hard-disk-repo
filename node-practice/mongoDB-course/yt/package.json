@@ -1,0 +1,18 @@
+{
+  "name": "yt",
+  "version": "1.0.0",
+  "description": "install mongoDB and mongoSH\r ```bash\r mongosh\r show dbs\r use <databasename>\r show collections\r cls\r exit\r use \r ```\r ```js\r db.users()\r db.dropDatabase()\r db.users.insertOne({name: \"boi\"})\r db.users.insertOne({name: \"sally\", age:19, address:{street:\"xyz\", block:\"d\"}, hobbies:\"none\"})\r db.users.find()\r db.users.find({<object>})\r db.users.find({<object>}, {<whatYouWantToReturn>})\r db.users.find(){.sort({name:1}), .skip(1), .limit(2)}\r db.users.insertMany([{name:\"john\"}, {name:\"natasha\", age:18}])\r ```\r sorting -> 1 = ascending , -1 = descending\r complex queries\r $eq\r $ne\r $lt\r $lte\r $gt\r $gte\r $in -> kinda like or requires list\r $nin\r {$exists: true/false}\r $and: [{}, {}]\r $or: [{}, {}]\r $expr: {<$comparitiveExpresson: [\"$field1\", \"$field2\"]>}",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

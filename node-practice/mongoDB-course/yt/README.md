@@ -47,3 +47,7 @@ db.users.deleteMany({<object>})
 ```
 
 
+```bash
+npm i mongoose
+npm i --save-dev nodemon
+```
