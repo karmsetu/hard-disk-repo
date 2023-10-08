@@ -1,0 +1,14 @@
+POST http://127.0.0.1:3000/api/posts
+Content-Type: application/json
+
+{
+    "name": "BOI"
+}
+###
+
+POST http://127.0.0.1:3000/api/log-in
+Content-Type: application/json
+
+{
+    
+}
