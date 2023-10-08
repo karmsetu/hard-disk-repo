@@ -1,0 +1,23 @@
+GET http://127.0.0.1:3000/sub/
+###
+GET http://127.0.0.1:3000/sub/65228d22b77b3a5bcb91648a
+###
+POST http://127.0.0.1:3000/sub/
+Content-Type: application/json
+
+{
+    "name": "dummy-name",
+    "subscriberToChannel": "boi"
+
+}
+
+###
+DELETE  http://127.0.0.1:3000/sub/65227fb68e489016246dca93
+
+###
+PATCH   http://127.0.0.1:3000/sub/65227fcf2779d40e3c7239c2
+Content-Type: application/json
+
+{
+    "name": "new Dummy"
+}
