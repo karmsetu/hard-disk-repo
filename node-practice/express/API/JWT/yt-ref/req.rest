@@ -1,4 +1,15 @@
+
+
 GET http://127.0.0.1:3000/posts
+Authorization: Bearer
+bc304897b04a6a25151fba618ff64c68aaf9e5fb7bfa9ab67612b0cd9820cdf0c0b5921e9bf0671b2bb69c097085d562b9dbea25358164b29bc4d8dd07ba8c42
+###
+POST http://127.0.0.1:3000/login
+Content-Type: application/json
+
+{
+    "userName":"shourya" 
+}
 ###
 POST http://127.0.0.1:3000/login
 Content-Type: application/json
