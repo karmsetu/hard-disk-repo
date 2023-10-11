@@ -8,12 +8,5 @@ POST http://127.0.0.1:3000/login
 Content-Type: application/json
 
 {
-    "userName":"shourya" 
-}
-###
-POST http://127.0.0.1:3000/login
-Content-Type: application/json
-
-{
-    "userName":"dummy_name_REST_client" 
+    "username":"kyle" 
 }
