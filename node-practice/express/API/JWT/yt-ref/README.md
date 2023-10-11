@@ -8,3 +8,17 @@ npm i --save-dev nodemon
 node
 require('crypto').randombytes(64).toString('hex')
 ```
+
+## error01 (`undefined` token)
+```js
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+```
+or alternatively
+```js
+Object.entries(theObj)
+```
+[fix01-ref](https://stackoverflow.com/questions/10334267/javascript-get-object-key-name)

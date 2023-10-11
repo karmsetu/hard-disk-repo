@@ -2,11 +2,24 @@
 
 GET http://127.0.0.1:3000/posts
 Authorization: Bearer
-bc304897b04a6a25151fba618ff64c68aaf9e5fb7bfa9ab67612b0cd9820cdf0c0b5921e9bf0671b2bb69c097085d562b9dbea25358164b29bc4d8dd07ba8c42
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hvdXJ5YSIsImlhdCI6MTY5NzA1NzA3NH0.V--UTtcgtdyh25TkltkbGnUTQ9Hmpy-86TbfcCYmFE8
 ###
 POST http://127.0.0.1:3000/login
 Content-Type: application/json
 
 {
-    "username":"kyle" 
+    "username":"shourya" 
+}
+
+
+###
+POST http://127.0.0.1:5000/api/posts
+Authorization: Bearer
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImJyYWQiLCJlbWFpbCI6ImJyYWRAZ21haWwuY29tIn0sImlhdCI6MTY5NzA1Nzk0OCwiZXhwIjoxNjk3MDU3OTc4fQ.LjdQRz4hAOGwzxnUWFzlyChJnlwwsoezC_1HG85RhmQ
+###
+POST http://127.0.0.1:5000/api/login
+Content-Type: application/json
+
+{
+    "username":"brad" 
 }
