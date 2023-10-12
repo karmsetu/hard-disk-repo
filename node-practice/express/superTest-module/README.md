@@ -25,3 +25,9 @@ ReferenceError: test is not defined
     :review git commit `fix01-supertest.js`
 ## fix01
 the odin [ref](https://www.theodinproject.com/lessons/nodejs-testing-routes-and-controllers) is not reliable/updated, check out the npm-supertest [ref](https://www.npmjs.com/package/supertest)
+## fix01.2
+[node ref](https://nodejs.org/api/test.html)
+tests need to be run blockqouted (•_•)
+```
+node --test testApp.js
+```
