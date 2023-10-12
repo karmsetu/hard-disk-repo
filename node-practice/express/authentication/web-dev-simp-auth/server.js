@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const bcrypt = require('bcrypt')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -7,12 +8,19 @@ const users = []
 app.get('/users', (req, res)=>{
     res.json(users)
 })
-app.post('/users', (req, res)=>{
+app.post('/users', async (req, res)=>{
+    try {
+        const salt = await bcrypt.genSalt()
+        const hashedPass = await bcrypt.hash(req.body.password, salt)
+    } catch (error) {
+        
+    }
+
     const username = req.body.name
     const userpassword = req.body.password
     const reqUserCred = {
         name: username,
-        password: userpassword
+        password: hashedPass
     }
     const reqBody = req.body
     console.log({reqBody, username,userpassword})

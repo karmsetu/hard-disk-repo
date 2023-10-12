@@ -12,3 +12,7 @@ when using `.rest` ext to sent POST request, the body is returning `undefined`
 the reason is not yet found
 remedy: use POSTMAN
 ![how to use POSTMAN](./img/error01-remedy.jpg)
+
+# hashing password
+1. create a `salt`
+2. use that `salt` to create hash
