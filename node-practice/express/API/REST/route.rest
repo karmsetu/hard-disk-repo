@@ -6,7 +6,7 @@ POST http://127.0.0.1:3000/sub/
 Content-Type: application/json
 
 {
-    "name": "dummy-name",
+    "name": "dummy-name-new",
     "subscriberToChannel": "boi"
 
 }
