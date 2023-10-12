@@ -10,45 +10,36 @@ app.get('/users', (req, res)=>{
 })
 app.post('/users', async (req, res)=>{
     try {
-        const salt = await bcrypt.genSalt()
-        const hashedPass = await bcrypt.hash(req.body.password, salt)
+        // const salt = await bcrypt.genSalt()
+        // const hashedPass = await bcrypt.hash(req.body.password, salt)//old method
+        const hashedPass = await bcrypt.hash(req.body.password, 10)//new method
+        console.log({hashedPass})
+        const user = {
+            name: req.body.name,
+            password: hashedPass
+        }
+        users.push(user)
+        res.json(users)
     } catch (error) {
-        
+        console.log({error})
+        res.status(500).send()
     }
+})
 
-    const username = req.body.name
-    const userpassword = req.body.password
-    const reqUserCred = {
-        name: username,
-        password: hashedPass
+app.post('/users/login',async (req, res)=>{
+    const user = users.find(user=> user.name === req.body.name)
+    if (user ==null) {
+        return res.status(400).send('cannot find user')
     }
-    const reqBody = req.body
-    console.log({reqBody, username,userpassword})
-    users.push(reqUserCred)
-    res.json(users)
+    try {
+        if (await bcrypt.compare(req.body.password, user.password)){
+            res.send('success')
+        } else {
+            res.send('not allowed')
+        }
+    } catch (error) {
+        console.log({error})
+        res.status(500).send()
+    }
 })
 app.listen(3000)
-
-
-
-// const express = require('express');
-// const app = express();
-// const PORT = 3000;
- 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
- 
-// app.post('/signup', function (req, res) {
-//     const data = req.body;
-//     console.log({data})
-//     console.log("Name: ", data.name);
-//     console.log("Age: ", data.age);
-//     console.log("Gender: ", data.gender);
- 
-//     res.send();
-// });
- 
-// app.listen(PORT, function (err) {
-//     if (err) console.log(err);
-//     console.log("Server listening on PORT", PORT);
-// });

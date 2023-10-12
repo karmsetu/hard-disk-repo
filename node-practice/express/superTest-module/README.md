@@ -11,6 +11,10 @@ npm install supertest --save-dev
 - Explain and have a firm understanding of .expect() method’s functionality.
 - Have familiarity with supertest’s documentation and methods.
 
+## read
+[main/root ref](https://github.com/ladjs/supertest)
+[main/root ref-npm](https://www.npmjs.com/package/supertest?activeTab=readme)
+
 ## error01
 ```bash
 ReferenceError: test is not defined
