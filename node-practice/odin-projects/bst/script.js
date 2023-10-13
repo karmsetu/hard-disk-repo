@@ -1,24 +1,19 @@
-const Node = require('./Node')
-function createBST(sortedArray, startIndex=0, endIndex=0) {
-    if (startIndex > endIndex) return null  
-    const mid = (startIndex+endIndex)/2
-    const newTree = new Node(sortedArray[mid])
-    newTree.left = createBST(sortedArray, startIndex, endIndex-1)
-    newTree.right = createBST(sortedArray, mid+1, endIndex)
-    return newTree
-}
-
-// import './tree'
 const tree = require('./tree')
-console.log(tree)
-const t= new tree()
+// function createBST(sortedArray, startIndex=0, endIndex=sortedArray.length-1) {
+//     if (startIndex > endIndex) return null  
+//     const midPoint = Math.ceil((startIndex+endIndex)/2)
+//     const parentTree = new Node(sortedArray[midPoint])
+//     console.log({parentTree, midPoint, startIndex, endIndex})
+//     parentTree.left = createBST(sortedArray, startIndex, midPoint-1)
+//     parentTree.right = createBST(sortedArray, midPoint+1,endIndex )
+//     return parentTree
+// }
 
-// t.arrayAdd([1,2,3,4,5,6,7,8,])
-t.arrayAdd([5,1,2,10,4,9,6,7,8,10])
-// console.log(t)
-// t.showNodes()
-t.prettyPrint(t.root)
-
-const balBST = createBST([1,2,3,4,5,6,7,8,9,10])
-console.log(balBST)
-
+const balBST = new tree()
+balBST.createBSTbyTree([1,2,3,4,5,6,7,8,9])
+balBST.prettyPrint(balBST.data)
+// console.log(balBST.root)
+// console.log(balBST)
+// const nt = new tree()
+// nt.arrayAdd([1,2,3,4,5,7])
+// console.log(nt.right)

@@ -43,9 +43,6 @@ class tree {
         }
         return currentMax
     }
-    showNodes(){
-        console.log(this.root)
-    }
     arrayAdd(dataArray){
         let arrayInd = 0
         while (arrayInd <= dataArray.length) {
@@ -53,7 +50,29 @@ class tree {
             arrayInd = arrayInd +1
         }
     }
-    prettyPrint = (node, prefix = "", isLeft = true) => {
+    createBST(sortedArray, startIndex=0, endIndex=sortedArray.length-1) {
+        if (startIndex > endIndex) return null  
+        const midPoint = Math.ceil((startIndex+endIndex)/2)
+        const parentTree = new Node(sortedArray[midPoint])
+        parentTree.left = this.createBST(sortedArray, startIndex, midPoint-1)
+        parentTree.right = this.createBST(sortedArray, midPoint+1,endIndex )
+        console.log({parentTree, midPoint, startIndex, endIndex})
+        return parentTree
+    }
+    createBSTbyTree(sortedArray, startIndex=0, endIndex=sortedArray.length-1, pvtIndex=0) {
+        if (startIndex > endIndex) return null  
+        const midPoint = Math.ceil((startIndex+endIndex)/2)
+        const parentTree = new Node(sortedArray[midPoint])
+        if (pvtIndex == 0) {
+            this.root = parentTree
+            pvtIndex++
+        }
+        parentTree.left = this.createBST(sortedArray, startIndex, midPoint-1)
+        parentTree.right = this.createBST(sortedArray, midPoint+1,endIndex )
+        console.log({parentTree, midPoint, startIndex, endIndex})
+        return parentTree
+    }
+    prettyPrint = (node = this.root, prefix = "", isLeft = true) => {
         if (node === null) {
           return;
         }
@@ -65,6 +84,11 @@ class tree {
           this.prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
         }
       };
+    delete(input, node=this.root){    
+        if(node.data == input){
+            
+        }
+    }
 }
 
 module.exports = tree
