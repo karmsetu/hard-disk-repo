@@ -1,5 +1,2 @@
-const addMove = (x, y, level) => {
-	if (x >= 0 && x <= 7 && y >= 0 && y <= 7 && board[x][y] == null) {
-		board[x][y] = level;
-	}
-};
+[code shamelessly copied from](https://unicorn-utterances.com/posts/chess-knight-problem)
+[graph intro](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
