@@ -3,9 +3,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "name": "project01",
+  "name": "staticfile",
   "version": "1.0.0",
   "main": "script.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
