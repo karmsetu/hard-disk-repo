@@ -1,0 +1,55 @@
+body {
+    background-color: #1A1B21
+ }
+
+*{
+    color: #FFFFFF
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: red 5px solid; */
+    /* background: red; */
+}
+
+.photo-icon {
+    height: 240px;
+    border-radius: 7px
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* border: blue 5px solid; */
+}
+
+.social-buttons > button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 20px;
+    column-gap: 7px;
+}
+
+.twitter-icon {
+    background: #5093E2
+}
+
+.github-icon {
+    color: black;
+}
+
+.footer {
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+    width: calc(100%-12px);
+    /* border: purple 5px solid; */
+    padding: 7px
+}
+
