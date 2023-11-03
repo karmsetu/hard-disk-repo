@@ -57,3 +57,35 @@ ReactDOM.render(Header(), document.getElementById("root"))
 ```
 use : <Header />
 
+
+1. What do props help us accomplish?
+it stands for proprty attribute, it help in making the component dynamic
+
+
+2. How do you pass a prop into a component?
+`function ComponentName(prop)`
+
+
+3. Can I pass a custom prop (e.g. `blahblahblah={true}`) to a native
+   DOM element? (e.g. <div blahblahblah={true}>) Why or why not?
+nope, it is unique to JSX element
+
+
+4. How do I receive props in a component?
+function Navbar(prop) {
+    return (
+        <header>
+            prop.comp
+        </header>
+    )
+}
+
+
+5. What data type is `props` when the component receives it?
+object
+
+
+# error02
+Error: Unknown error (/node_modules/react-dom/cjs/react-dom.development.js:3994)
+!The above error occurred in the <Joke> component: at Joke (exe1.bundle.js:73:13) at div at App Consider adding an error boundary to your tree to customize error handling behavior. Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+›Error: A cross-origin error was thrown. React doesn't have access to the actual error object in development. See https://reactjs.org/link/crossorigin-error for more information. (/node_modules/react-dom/cjs/react-dom.development.js:4005)
