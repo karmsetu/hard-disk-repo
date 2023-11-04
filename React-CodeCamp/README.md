@@ -86,6 +86,19 @@ object
 
 
 # error02
+```bash
 Error: Unknown error (/node_modules/react-dom/cjs/react-dom.development.js:3994)
 !The above error occurred in the <Joke> component: at Joke (exe1.bundle.js:73:13) at div at App Consider adding an error boundary to your tree to customize error handling behavior. Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 ›Error: A cross-origin error was thrown. React doesn't have access to the actual error object in development. See https://reactjs.org/link/crossorigin-error for more information. (/node_modules/react-dom/cjs/react-dom.development.js:4005)
+```
+
+[array mapping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+## bug01
+`Warning: Each child in a list should have a unique "key" prop. Check the render method of `App`. See https://reactjs.org/link/warning-keys for more information. at h3 at App`
+
+
+# conditional rendering
+```js
+{props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
+```
