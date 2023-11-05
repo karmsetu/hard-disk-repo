@@ -84,6 +84,28 @@ function Navbar(prop) {
 5. What data type is `props` when the component receives it?
 object
 
+- state
+1. How would you describe the concept of "state"?
+A way for React to remember saved values from within a component.
+This is similar to declaring variables from within a component,
+with a few added bonuses (which we'll get to later)
+
+
+2. When would you want to use props instead of state?
+Anytime you want to pass data into a component so that
+component can determine what will get displayed on the
+screen.
+
+
+3. When would you want to use state instead of props?
+Anytime you want a component to maintain some values from
+within the component. (And "remember" those values even
+when React re-renders the component).
+
+
+4. What does "immutable" mean? Are props immutable? Is state immutable?
+Unchanging. Props are immutable. State is mutable.
+
 
 # error02
 ```bash
@@ -102,3 +124,11 @@ Error: Unknown error (/node_modules/react-dom/cjs/react-dom.development.js:3994)
 ```js
 {props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
 ```
+## new css property
+```css
+text-indent: 5px;
+```
+## JS events in React
+
+[src](https://legacy.reactjs.org/docs/events.html#mouse-events)
+[ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
