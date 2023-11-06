@@ -317,3 +317,32 @@ be saved in state. Other form elements use the `value` property instead.
 4. How would you explain what the "dependecies array" is?
 - Second paramter to the useEffect function
 - A way for React to know whether it should re-run the effect function
+
+# useEffect cleaning 
+```js
+import React from "react"
+
+export default function WindowTracker() {
+    
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+    
+    React.useEffect(() => {
+        function watchWidth() {
+            console.log("Setting up...")
+            setWindowWidth(window.innerWidth)
+        }
+        
+        window.addEventListener("resize", watchWidth)
+        
+        return function() {
+            console.log("Cleaning up...")
+            window.removeEventListener("resize", watchWidth)
+        }
+    }, [])
+    
+    return (
+        <h1>Window width: {windowWidth}</h1>
+    )
+}
+
+```
