@@ -337,3 +337,107 @@ export default function Login() {
     )
 }
 ```
+
+## defer
+```js
+import React, { Suspense } from "react"
+import { useLoaderData, defer } from "react-router-dom"
+import { sleep, getWeather } from "./utils"
+
+/**
+ * Challenge: start setting up our deferred data just like we
+ * did together. Scrub back for reference if you need to jog
+ * your memory :)
+ */
+export async function loader() {
+    const weather = await getWeather()
+    return defer({weather:weather})
+}
+
+export default function Weather() {
+    const loaderData = useLoaderData()
+    const iconUrl =
+        `http://openweathermap.org/img/wn/${loaderData.weather[0].icon}@2x.png`
+
+    return (
+        <section className="weather-container">
+            <h1>Weather in Salt Lake City</h1>
+            <h3>{loaderData.main.temp}ºF</h3>
+            <img src={iconUrl} />
+        </section>
+    )
+}
+
+```
+
+## <Await /> component
+```js
+import React, { Suspense } from "react"
+import { useLoaderData, defer, Await } from "react-router-dom"
+import { sleep, getWeather } from "./utils"
+
+export async function loader() {
+    const weatherPromise = getWeather()
+    return defer({ weather: weatherPromise })
+}
+
+export default function Weather() {
+    const loaderData = useLoaderData()
+
+    return (
+        <section className="weather-container">
+            <h1>Weather in Salt Lake City</h1>
+            <Await resolve={loaderData.weather}>
+                {(loadedWeather) => {
+                    const iconUrl =
+                        `http://openweathermap.org/img/wn/${loadedWeather.weather[0].icon}@2x.png`
+                    return (
+                        <>
+                            <h3>{loadedWeather.main.temp}ºF</h3>
+                            <img src={iconUrl} />
+                        </>
+                    )
+                }}
+            </Await>
+        </section>
+    )
+}
+
+```
+
+## <Suspense /> -REact
+```js
+import React, { Suspense } from "react"
+import { useLoaderData, defer, Await } from "react-router-dom"
+import { sleep, getWeather } from "./utils"
+
+export async function loader() {
+    const weatherPromise = getWeather()
+    return defer({ weather: weatherPromise })
+}
+
+export default function Weather() {
+    const loaderData = useLoaderData()
+
+    return (
+        <section className="weather-container">
+            <h1>Weather in Salt Lake City</h1>
+            <Suspense fallback={}>
+                <Await resolve={loaderData.weather}>
+                    {(loadedWeather) => {
+                        const iconUrl =
+                            `http://openweathermap.org/img/wn/${loadedWeather.weather[0].icon}@2x.png`
+                        return (
+                            <>
+                                <h3>{loadedWeather.main.temp}ºF</h3>
+                                <img src={iconUrl} />
+                            </>
+                        )
+                    }}
+                </Await>
+            </Suspense>
+        </section>
+    )
+}
+
+```
