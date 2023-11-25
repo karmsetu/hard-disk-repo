@@ -5,7 +5,7 @@ url = `http://testUser:pass@website.com:8080/path?value=test#testHash`
 // const responseData = await response.json()
 
 const urlObj = new URL(url)
-console.log(urlObj)
+// console.log(urlObj)
 /*URL {
   href: 'http://testUser:pass@website.com:8080/path?value=test#testHash',
   origin: 'http://website.com:8080',
@@ -38,4 +38,21 @@ const selfMadePromise = new Promise((resolve, reject) => {
 selfMadePromise
     .then(mess => console.log(mess))
     .catch(err => console.log(err))
-// console.log(getRandomBool())
+
+// await keyword
+const printPromise =async()=>{
+    try {
+        const message = await selfMadePromise
+        console.log({message})
+    } catch (error) {
+        console.log({error})   
+    }
+}
+
+printPromise()
+
+let myHeaders = new Headers({
+"Content-Type": "text/xml",
+});
+
+console.log(myHeaders.get("Content-Type"))

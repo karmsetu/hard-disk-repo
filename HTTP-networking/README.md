@@ -16,3 +16,9 @@ where xxx can be any no. b/w 0-256
 where `api` is a subdomain
 
 # URI (Uniform Resource Identifier)
+
+## promises 
+[promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+# HTTP Headers
+[headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers)
