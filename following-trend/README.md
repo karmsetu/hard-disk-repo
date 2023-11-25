@@ -11,5 +11,3 @@ testUser:pass - for login
 ## Caddy
 [caddy](https://caddyserver.com/)
 
-## promises 
-[promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
