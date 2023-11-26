@@ -1,0 +1,16 @@
+{
+  "name": "http-networking",
+  "version": "1.0.0",
+  "description": "xxx.xxx.xxx.xxx\r where xxx can be any no. b/w 0-256",
+  "main": "fetchAPI.js",
+  "scripts": {
+    "test": "jest",
+    "devStart": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
