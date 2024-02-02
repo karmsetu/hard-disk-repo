@@ -1,8 +1,39 @@
-# React + Vite
+# framer-motion notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# importing framer
 
-Currently, two official plugins are available:
+```js
+import { motion } from "framer-motion";
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# creating motion element
+
+```js
+<motion.< elementName >>
+</motion.< elementName >>
+```
+
+-   for example:
+
+```jsx
+<motion.div></motion.div>
+```
+
+# motion props
+
+1. `initial={{}}`: defines initaial state
+
+2. `animate={{}}`: defines animated state
+3. `transition={{}}`: defines transition state
+
+# transition prop
+
+```jsx
+transition={{
+        duration: 1.0,
+        type: "spring",
+        ease: "anticipate",
+    }}
+```
+
+<!-- TODO: documentation -->
