@@ -75,3 +75,7 @@ button:focus-visible {
     height: 200px;
     /* background: var(--accent); */
 }
+
+.close-loader {
+    cursor: none;
+}

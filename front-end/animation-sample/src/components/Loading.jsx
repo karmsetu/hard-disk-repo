@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import reactLogo from "../assets/react.svg";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, spring } from "framer-motion";
 import "../App.css";
+import "../index.css";
 export default function Loading() {
     const [loadingPer, setLoadingPer] = useState(0);
     // console.log(props.removeLoader);
@@ -19,18 +20,25 @@ export default function Loading() {
         },
         close: {
             opacity: 0,
-            transition: { duration: 2.5 },
+            transition: { type: spring, duration: 2.5 },
+        },
+        removed: {
+            display: "none",
         },
     };
     return (
         <>
             <motion.div
-                className={`loader`}
+                className={`loader ${
+                    loadingPer == 100 ? "close-loader" : null
+                }`}
                 variants={itemVariants}
                 animate={loadingPer == 100 ? "close" : "active"}
             >
                 <motion.div
-                    className="react-logo"
+                    className={`react-logo ${
+                        loadingPer == 100 ? "close-loader" : null
+                    }`}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{
                         opacity: 1,
